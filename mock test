@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 7 CBSE Mock Tests</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Class 7 CBSE Mock Tests</h1>
+    </header>
+    
+    <nav>
+      <ul>
+        <li><a href="science.html">Science Mock Test</a></li>
+        <li><a href="maths.html">Mathematics Mock Test</a></li>
+        <li><a href="english.html">English Mock Test</a></li>
+        <li><a href="social.html">Social Studies Mock Test</a></li>
+      </ul>
+    </nav>
+  </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Science Mock Test - Class 7 CBSE</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="quiz.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Science Mock Test - Class 7</h1>
+    </header>
+
+    <div id="quiz-container">
+      <form id="quiz-form">
+        <div class="question">
+          <p>1. What is the chemical symbol for water?</p>
+          <label><input type="radio" name="q1" value="A"> A) H2O</label><br>
+          <label><input type="radio" name="q1" value="B"> B) CO2</label><br>
+          <label><input type="radio" name="q1" value="C"> C) O2</label><br>
+          <label><input type="radio" name="q1" value="D"> D) N2</label><br>
+        </div>
+
+        <!-- Add more questions here -->
+
+        <button type="button" onclick="calculateResult()">Submit</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+function calculateResult() {
+  let score = 0;
+  let totalQuestions = 1; // Adjust this to count all questions
+
+  // Check answers for each question
+  if (document.querySelector('input[name="q1"]:checked')?.value === 'A') {
+    score++;
+  }
+
+  // Check for other questions...
+
+  // Display result
+  alert('Your score: ' + score + '/' + totalQuestions);
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2em;
+  color: #333;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 10px 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #007BFF;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+#quiz-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
